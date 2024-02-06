@@ -3,6 +3,10 @@
 
 <ul>
 <%for contact in contacts%>
-<li><%=contact["first_name"]%> <%=contact["last_name"]%> <%company = Company.find_by ["id"] => </li>
+<%company = Company.find_by ({"id" => contact["company_id"]})%>
+
+<li><%=contact["first_name"]%> 
+<%=contact["last_name"]%> 
+@ <%= company["name"]%></li>
 <%end%>
 </ul>
